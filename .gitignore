@@ -1,7 +1,15 @@
 ### IntelliJ IDEA ###
+.idea/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+*.iml
+*.iws
+*.log
+*.tmp
+hs_err_pid*
+replay_pid*
+*.ctxt
 
 ### Eclipse ###
 .apt_generated
