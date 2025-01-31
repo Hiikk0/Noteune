@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: ua.hiikkolab.noteune.Main
+Class-Path: bcprov-jdk18on-1.80.jar bcprov-jdk18on-1.80-javadoc.jar bcpr
+ ov-jdk18on-1.80-sources.jar gson-2.11.0.jar gson-2.11.0-javadoc.jar gso
+ n-2.11.0-sources.jar jansi-2.4.0.jar jakarta.activation-2.0.1.jar javaf
+ aker-1.0.2.jar javafaker-1.0.2-javadoc.jar javafaker-1.0.2-sources.jar 
+ annotations-24.0.0.jar bcrypt-0.3.jar jakarta.mail-2.0.1.jar commons-la
+ ng3-3.17.0.jar commons-lang3-3.17.0-tests.jar commons-lang3-3.17.0-java
+ doc.jar commons-lang3-3.17.0-sources.jar commons-lang3-3.17.0-test-sour
+ ces.jar bcpkix-jdk18on-1.80.jar bcpkix-jdk18on-1.80-javadoc.jar bcpkix-
+ jdk18on-1.80-sources.jar commons-codec-1.17.2.jar commons-codec-1.17.2-
+ tests.jar commons-codec-1.17.2-javadoc.jar commons-codec-1.17.2-sources
+ .jar commons-codec-1.17.2-test-sources.jar
+

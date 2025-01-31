@@ -35,3 +35,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/data/users.json
+/data/views-2.json
+/data/views-true.json
+/data/user.settings.json
+/data/global.settings.json
+/lib/
+/release/

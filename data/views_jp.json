@@ -1,0 +1,242 @@
+[
+  {
+    "id": "1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30",
+    "header": "LogonMenu",
+    "content": "Noteuneへようこそ!!!\n 開始する前に、ログインまたは登録してください。\n 項目の名前を英語で入力するか、番号を入力してください。\n 1. ログイン\n 2. 登録",
+    "ways": ["2b7a9f8c-6b5e-4d3a-8b63-9b5a7c2b8c3d", "3c5d6e7f-9a8b-4c2a-8d62-8a6b7d2c9e3b", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["AuthGetUsername", "RegistrationGetUsername", "InvalidMenuSelection"],
+    "foreground": 31,
+    "background": 42,
+    "type": "menu"
+  },
+  {
+    "id": "2b7a9f8c-6b5e-4d3a-8b63-9b5a7c2b8c3d",
+    "header": "AuthGetUsername",
+    "content": "ログイン\n ユーザー名を入力してください。",
+    "ways": ["c034981b-93a5-482c-8e38-d7b89b790116", "72f9324e-127d-4ccd-87f1-35862e59b03b"],
+    "slugways": ["AuthGetPassword", "AuthTryAgainOrNot"],
+    "foreground": 34,
+    "background": 47,
+    "type": "auth"
+  },
+  {
+    "id": "c034981b-93a5-482c-8e38-d7b89b790116",
+    "header": "AuthGetPassword",
+    "content": "ログイン\n パスワードを入力してください。",
+    "ways": ["4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a", "72f9324e-127d-4ccd-87f1-35862e59b03b"],
+    "slugways": ["MainMenu", "AuthTryAgainOrNot"],
+    "foreground": 34,
+    "background": 47,
+    "type": "auth"
+  },
+  {
+    "id": "72f9324e-127d-4ccd-87f1-35862e59b03b",
+    "header": "AuthTryAgainOrNot",
+    "content": "ログインに失敗しました。\n ユーザー名またはパスワードが正しくありません。\n 以下の操作が可能です：\n 1. スタート画面に戻る\n 2. 認証を再度開始する\n 3. パスワードを再度入力する",
+    "ways": ["1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30", "2b7a9f8c-6b5e-4d3a-8b63-9b5a7c2b8c3d", "00000000-0000-0000-0000-000000000000"],
+    "slugways": ["LogonMenu", "AuthGetUsername", "PreviousPage"],
+    "foreground": 34,
+    "background": 47,
+    "type": "err"
+  },
+  {
+    "id": "3c5d6e7f-9a8b-4c2a-8d62-8a6b7d2c9e3b",
+    "header": "RegistrationGetUsername",
+    "content": "登録\n ユーザー名を入力してください。",
+    "ways": ["c1a87399-bced-4ccc-b6bb-bfaa133be8c5", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationGetPassword", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "c1a87399-bced-4ccc-b6bb-bfaa133be8c5",
+    "header": "RegistrationGetPassword",
+    "content": "登録\n パスワードを入力してください。",
+    "ways": ["42e382f7-2b6a-4808-b362-d735f22d864a", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationRepeatPassword", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "42e382f7-2b6a-4808-b362-d735f22d864a",
+    "header": "RegistrationRepeatPassword",
+    "content": "登録\n パスワードを再度入力してください。忘れないようにしてください！",
+    "ways": ["4e337182-fb29-40f2-a2ea-b845a6c39744", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationGetEmail", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "4e337182-fb29-40f2-a2ea-b845a6c39744",
+    "header": "RegistrationGetEmail",
+    "content": "登録\n メールアドレスを入力してください。確認コードを送信しますので、そのコードを入力してください。",
+    "ways": ["e94afc1c-440a-4cdf-9b7b-2a99fa98476b", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationGetVerificationCode", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "e94afc1c-440a-4cdf-9b7b-2a99fa98476b",
+    "header": "RegistrationGetVerificationCode",
+    "content": "登録\n メールを送信しました。受信トレイを確認し、ここにコードを入力してください。",
+    "ways": ["4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["MainMenu", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "b00a8946-9c5d-4ee5-ade8-c5e8814337bf",
+    "header": "RegistrationTryAgainOrNot",
+    "content": "登録に失敗しました。\n パスワードが8文字以上32文字以下で、大文字、小文字、数字をそれぞれ1つ以上含んでいることを確認してください。\n また、ユーザー名は空にできません。\n 最後に、確認コードの入力に誤りがあったかもしれません ;)\n 以下の操作が可能です：\n 1. スタート画面に戻る\n 2. 登録を最初からやり直す\n 3. 確認コードを再度入力する",
+    "ways": ["1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30", "3c5d6e7f-9a8b-4c2a-8d62-8a6b7d2c9e3b", "00000000-0000-0000-0000-000000000000"],
+    "slugways": ["LogonMenu", "RegistrationGetUsername", "PreviousPage"],
+    "foreground": 33,
+    "background": 40,
+    "type": "err"
+  },
+  {
+    "id": "4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a",
+    "header": "MainMenu",
+    "content": "メインメニュー\n 実行したい操作を選択してください：\n 1. ログアウトしてスタート画面に戻る\n 2. 設定を変更する\n 0. プログラムを終了する",
+    "ways": ["1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30", "5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["LogonMenu", "Settings", "InvalidMenuSelection"],
+    "foreground": 35,
+    "background": 46,
+    "type": "mainmenu"
+  },
+  {
+    "id": "5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a",
+    "header": "Settings",
+    "content": "設定\n ここで以下の操作が可能です：\n 1. メインメニューに戻る\n 2. アカウント設定を変更する\n 3. 背景色を変更する\n 4. 前景色を変更する\n 5. デフォルト設定を変更する",
+    "ways": ["4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a", "0b477a3e-000c-4b37-9963-7b565e9697a1", "9c3d4e2f-6a8b-4f2a-8c56-2e3b5d9a1b9c", "0d4e5f1a-7b9c-4a2b-8b55-1d2a4f8a7b8c", "81653b35-d987-4eaf-a681-1bdd2f299984", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["MainMenu", "AccountSettings", "SettingsChangeBackgroundColor", "SettingsChangeForegroundColor", "InvalidMenuSelection"],
+    "foreground": 30,
+    "background": 43,
+    "type": "menu"
+  },
+  {
+    "id": "0b477a3e-000c-4b37-9963-7b565e9697a1",
+    "header": "AccountSettings",
+    "content": "アカウント設定\n ここで以下の操作が可能です：\n 1. 設定に戻る\n 2. ユーザー名を変更する\n 3. パスワードを変更する\n 4. メールアドレスを変更する",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "6f9a1b8c-3d5e-4c2a-8b59-5d3a6e7f8a6b", "7a1b2c9d-4e6f-4d3a-8c58-4e2b5f7a9c7d", "8b2c3d1e-5f7a-4e2b-8d57-3d4a6f8b9d8c", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["Settings", "SettingsChangeUsername", "SettingsChangePassword", "SettingsChangeEmail", "InvalidMenuSelection"],
+    "foreground": 30,
+    "background": 43,
+    "type": "menu"
+  },
+  {
+    "id": "81653b35-d987-4eaf-a681-1bdd2f299984",
+    "header": "GlobalSettings",
+    "content": "グローバル設定\n ここで以下の操作が可能です：\n 1. 設定に戻る\n 2. デフォルトの前景色を変更する\n 3. デフォルトの背景色を変更する\n 4. デフォルトの言語を変更する",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "e8cb771b-0d62-4087-9e19-6cf6c9992314", "5f828d28-9034-4f93-9dac-98fb33ec441d", "1292a98f-1fc1-4b28-a701-ce9de39c718b", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["Settings", "GlobalSettingsChangeForegroundColor", "GlobalSettingsChangeBackgroundColor", "GlobalSettingsChangeLanguage", "InvalidMenuSelection"],
+    "foreground": 30,
+    "background": 43,
+    "type": "menu"
+  },
+  {
+    "id": "6f9a1b8c-3d5e-4c2a-8b59-5d3a6e7f8a6b",
+    "header": "SettingsChangeUsername",
+    "content": "ユーザー名を変更\n 新しいユーザー名を入力してください。",
+    "ways": ["0b477a3e-000c-4b37-9963-7b565e9697a1", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["AccountSettings", "SettingsTryAgainOrNot"],
+    "foreground": 32,
+    "background": 44,
+    "type": "set"
+  },
+  {
+    "id": "7a1b2c9d-4e6f-4d3a-8c58-4e2b5f7a9c7d",
+    "header": "SettingsChangePassword",
+    "content": "パスワードを変更\n 新しいパスワードを入力してください。",
+    "ways": ["0b477a3e-000c-4b37-9963-7b565e9697a1", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["AccountSettings", "SettingsTryAgainOrNot"],
+    "foreground": 36,
+    "background": 45,
+    "type": "set"
+  },
+  {
+    "id": "8b2c3d1e-5f7a-4e2b-8d57-3d4a6f8b9d8c",
+    "header": "SettingsChangeEmail",
+    "content": "メールアドレスを変更\n 新しいメールアドレスを入力してください。",
+    "ways": ["0b477a3e-000c-4b37-9963-7b565e9697a1", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["AccountSettings", "SettingsTryAgainOrNot"],
+    "foreground": 37,
+    "background": 41,
+    "type": "set"
+  },
+  {
+    "id": "9c3d4e2f-6a8b-4f2a-8c56-2e3b5d9a1b9c",
+    "header": "SettingsChangeBackgroundColor",
+    "content": "新しい背景色を入力してください。\n コンソールは256色をサポートしています。例：\n 黒: 0\n ダークレッド: 1\n ダークグリーン: 2\n 茶色: 3\n ダークブルー: 4\n ダークパープル: 5\n シアン: 6\n ライトグレー: 7\n 詳細については、以下のリンクを参照してください：\n https://www.ditig.com/publications/256-colors-cheat-sheet\n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["Settings", "SettingsTryAgainOrNot"],
+    "foreground": 34,
+    "background": 42,
+    "type": "set"
+  },
+  {
+    "id": "0d4e5f1a-7b9c-4a2b-8b55-1d2a4f8a7b8c",
+    "header": "SettingsChangeForegroundColor",
+    "content": "新しい前景色を入力してください。\n コンソールは256色をサポートしています。例：\n 黒: 0\n ダークレッド: 1\n ダークグリーン: 2\n 茶色: 3\n ダークブルー: 4\n ダークパープル: 5\n シアン: 6\n ライトグレー: 7\n 詳細については、以下のリンクを参照してください：\n https://www.ditig.com/publications/256-colors-cheat-sheet\n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["Settings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "e8cb771b-0d62-4087-9e19-6cf6c9992314",
+    "header": "GlobalSettingsChangeForegroundColor",
+    "content": "新しい前景色を入力してください。\n コンソールは256色をサポートしています。例：\n 黒: 0\n ダークレッド: 1\n ダークグリーン: 2\n 茶色: 3\n ダークブルー: 4\n ダークパープル: 5\n シアン: 6\n ライトグレー: 7\n 詳細については、以下のリンクを参照してください：\n https://www.ditig.com/publications/256-colors-cheat-sheet\n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["81653b35-d987-4eaf-a681-1bdd2f299984", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["GlobalSettings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "5f828d28-9034-4f93-9dac-98fb33ec441d",
+    "header": "GlobalSettingsChangeBackgroundColor",
+    "content": "新しい背景色を入力してください。\n コンソールは256色をサポートしています。例：\n 黒: 0\n ダークレッド: 1\n ダークグリーン: 2\n 茶色: 3\n ダークブルー: 4\n ダークパープル: 5\n シアン: 6\n ライトグレー: 7\n 詳細については、以下のリンクを参照してください：\n https://www.ditig.com/publications/256-colors-cheat-sheet\n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["81653b35-d987-4eaf-a681-1bdd2f299984", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["GlobalSettings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "1292a98f-1fc1-4b28-a701-ce9de39c718b",
+    "header": "GlobalSettingsChangeLanguage",
+    "content": "新しい言語を2文字のコードで入力してください。",
+    "ways": ["81653b35-d987-4eaf-a681-1bdd2f299984", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["GlobalSettings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce",
+    "header": "SettingsTryAgainOrNot",
+    "content": "新しいパラメータの設定に失敗しました。\n 設定に戻るか、前のページに戻ることができます。",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "00000000-0000-0000-0000-000000000000"],
+    "slugways": ["Settings", "PreviousPage"],
+    "foreground": 33,
+    "background": 40,
+    "type": "err"
+  },
+  {
+    "id": "ca905823-df75-4751-9382-d467149f334a",
+    "header": "InvalidMenuSelection",
+    "content": "そのような項目は存在しません。",
+    "ways": ["00000000-0000-0000-0000-000000000000"],
+    "slugways": ["PreviousPage"],
+    "foreground": 33,
+    "background": 40,
+    "type": "err"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30",
+    "header": "LogonMenu",
+    "content": "Welcome to Noteune!!!\n But, before you start, please login or register. \n You can either write the name of the item in English, or simply enter its number. \n 1. Login \n 2. Register",
+    "ways": ["2b7a9f8c-6b5e-4d3a-8b63-9b5a7c2b8c3d", "3c5d6e7f-9a8b-4c2a-8d62-8a6b7d2c9e3b", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["AuthGetUsername", "RegistrationGetUsername", "InvalidMenuSelection"],
+    "foreground": 31,
+    "background": 42,
+    "type": "menu"
+  },
+  {
+    "id": "2b7a9f8c-6b5e-4d3a-8b63-9b5a7c2b8c3d",
+    "header": "AuthGetUsername",
+    "content": "Login on \n Write your username.",
+    "ways": ["c034981b-93a5-482c-8e38-d7b89b790116", "72f9324e-127d-4ccd-87f1-35862e59b03b"],
+    "slugways": ["AuthGetPassword", "AuthTryAgainOrNot"],
+    "foreground": 34,
+    "background": 47,
+    "type": "auth"
+  },
+  {
+    "id": "c034981b-93a5-482c-8e38-d7b89b790116",
+    "header": "AuthGetPassword",
+    "content": "Login on \n Write your password.",
+    "ways": ["4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a", "72f9324e-127d-4ccd-87f1-35862e59b03b"],
+    "slugways": ["MainMenu", "AuthTryAgainOrNot"],
+    "foreground": 34,
+    "background": 47,
+    "type": "auth"
+  },
+  {
+    "id": "72f9324e-127d-4ccd-87f1-35862e59b03b",
+    "header": "AuthTryAgainOrNot",
+    "content": "Login failed. \n The username or password is incorrect. \n You can: \n 1. Go to start screen \n 2. Start authentication again \n 3. Enter password again",
+    "ways": ["1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30", "2b7a9f8c-6b5e-4d3a-8b63-9b5a7c2b8c3d", "00000000-0000-0000-0000-000000000000"],
+    "slugways": ["LogonMenu", "AuthGetUsername", "PreviousPage"],
+    "foreground": 34,
+    "background": 47,
+    "type": "err"
+  },
+  {
+    "id": "3c5d6e7f-9a8b-4c2a-8d62-8a6b7d2c9e3b",
+    "header": "RegistrationGetUsername",
+    "content": "Registration \n Write your username.",
+    "ways": ["c1a87399-bced-4ccc-b6bb-bfaa133be8c5", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationGetPassword", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "c1a87399-bced-4ccc-b6bb-bfaa133be8c5",
+    "header": "RegistrationGetPassword",
+    "content": "Registration \n Write your password.",
+    "ways": ["42e382f7-2b6a-4808-b362-d735f22d864a", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationRepeatPassword", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "42e382f7-2b6a-4808-b362-d735f22d864a",
+    "header": "RegistrationRepeatPassword",
+    "content": "Registration \n Write your password again. Please make sure you don't forget it!",
+    "ways": ["4e337182-fb29-40f2-a2ea-b845a6c39744", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationGetEmail", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "4e337182-fb29-40f2-a2ea-b845a6c39744",
+    "header": "RegistrationGetEmail",
+    "content": "Registration \n Write your email. We will send you an email from which you will need to enter a confirmation code.",
+    "ways": ["e94afc1c-440a-4cdf-9b7b-2a99fa98476b", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["RegistrationGetVerificationCode", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "e94afc1c-440a-4cdf-9b7b-2a99fa98476b",
+    "header": "RegistrationGetVerificationCode",
+    "content": "Registration \n Email was sended. Check your inbox and write code here.",
+    "ways": ["4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a", "b00a8946-9c5d-4ee5-ade8-c5e8814337bf"],
+    "slugways": ["MainMenu", "RegistrationTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "reg"
+  },
+  {
+    "id": "b00a8946-9c5d-4ee5-ade8-c5e8814337bf",
+    "header": "RegistrationTryAgainOrNot",
+    "content": "Registration failed. \n Make sure that the password is available, more than 8 characters and less than 32, contains at least 1 uppercase letter, 1 lowercase letter and 1 number.\n Also, username can't be empty. \n After all, you might have made a mistake when entering the verification code ;) \n You can: \n 1. Go to start screen \n 2. Start all registration again \n 3. Enter verification code again",
+    "ways": ["1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30", "3c5d6e7f-9a8b-4c2a-8d62-8a6b7d2c9e3b", "00000000-0000-0000-0000-000000000000"],
+    "slugways": ["LogonMenu", "RegistrationGetUsername", "PreviousPage"],
+    "foreground": 33,
+    "background": 40,
+    "type": "err"
+  },
+  {
+    "id": "4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a",
+    "header": "MainMenu",
+    "content": "Main menu. \n Choose what you want to do: \n 1. Logout and go to the start screen \n 2. Set settings \n 0. Exit from programm",
+    "ways": ["1e7a3d2e-8a2e-4d7a-8d71-945d3c8b7e30", "5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["LogonMenu", "Settings", "InvalidMenuSelection"],
+    "foreground": 35,
+    "background": 46,
+    "type": "mainmenu"
+  },
+  {
+    "id": "5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a",
+    "header": "Settings",
+    "content": "Settings. \n You can here: \n 1. Go to main menu \n 2. Set account settings \n 3. Change background colour \n 4. Change foreground colour \n 5. Change defaults",
+    "ways": ["4d6e7f8a-1b9c-4e2b-8c61-7b5a6c3d7e4a", "0b477a3e-000c-4b37-9963-7b565e9697a1", "9c3d4e2f-6a8b-4f2a-8c56-2e3b5d9a1b9c", "0d4e5f1a-7b9c-4a2b-8b55-1d2a4f8a7b8c", "81653b35-d987-4eaf-a681-1bdd2f299984", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["MainMenu", "AccountSettings", "SettingsChangeBackgroundColor", "SettingsChangeForegroundColor", "InvalidMenuSelection"],
+    "foreground": 30,
+    "background": 43,
+    "type": "menu"
+  },
+  {
+    "id": "0b477a3e-000c-4b37-9963-7b565e9697a1",
+    "header": "AccountSettings",
+    "content": "Account settings. \n Here you can: \n 1. Go back to settings \n 2. Change username \n 3. Change password \n 4. Change email",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "6f9a1b8c-3d5e-4c2a-8b59-5d3a6e7f8a6b", "7a1b2c9d-4e6f-4d3a-8c58-4e2b5f7a9c7d", "8b2c3d1e-5f7a-4e2b-8d57-3d4a6f8b9d8c", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["Settings", "SettingsChangeUsername", "SettingsChangePassword", "SettingsChangeEmail", "InvalidMenuSelection"],
+    "foreground": 30,
+    "background": 43,
+    "type": "menu"
+  },
+    {
+    "id": "81653b35-d987-4eaf-a681-1bdd2f299984",
+    "header": "GlobalSettings",
+    "content": "Global settings. \n Here you can: \n 1. Go back to settings \n 2. Change foreground colour by default \n 3. Change background colour by default \n 4. Change language by default",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "e8cb771b-0d62-4087-9e19-6cf6c9992314", "5f828d28-9034-4f93-9dac-98fb33ec441d", "1292a98f-1fc1-4b28-a701-ce9de39c718b", "ca905823-df75-4751-9382-d467149f334a"],
+    "slugways": ["Settings", "GlobalSettingsChangeForegroundColor", "GlobalSettingsChangeBackgroundColor", "GlobalSettingsChangeLanguage", "InvalidMenuSelection"],
+    "foreground": 30,
+    "background": 43,
+    "type": "menu"
+  },
+  {
+    "id": "6f9a1b8c-3d5e-4c2a-8b59-5d3a6e7f8a6b",
+    "header": "SettingsChangeUsername",
+    "content": "Change username. \n Enter your new username",
+    "ways": ["0b477a3e-000c-4b37-9963-7b565e9697a1", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["AccountSettings", "SettingsTryAgainOrNot"],
+    "foreground": 32,
+    "background": 44,
+    "type": "set"
+  },
+  {
+    "id": "7a1b2c9d-4e6f-4d3a-8c58-4e2b5f7a9c7d",
+    "header": "SettingsChangePassword",
+    "content": "Change password. \n Enter your new password",
+    "ways": ["0b477a3e-000c-4b37-9963-7b565e9697a1", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["AccountSettings", "SettingsTryAgainOrNot"],
+    "foreground": 36,
+    "background": 45,
+    "type": "set"
+  },
+  {
+    "id": "8b2c3d1e-5f7a-4e2b-8d57-3d4a6f8b9d8c",
+    "header": "SettingsChangeEmail",
+    "content": "Change email. \n Enter your new email",
+    "ways": ["0b477a3e-000c-4b37-9963-7b565e9697a1", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["AccountSettings", "SettingsTryAgainOrNot"],
+    "foreground": 37,
+    "background": 41,
+    "type": "set"
+  },
+  {
+    "id": "9c3d4e2f-6a8b-4f2a-8c56-2e3b5d9a1b9c",
+    "header": "SettingsChangeBackgroundColor",
+    "content": "Enter new background colour. \n The console supports 256 colors. For example: \n Black: 0 \n Dark Red: 1 \n Dark Green: 2 \n Brown: 3 \n Dark Blue: 4 \n Dark Purple: 5 \n Cyan: 6 \n Light Gray : 7 \n For more information, you can follow the links: \n https://www.ditig.com/publications/256-colors-cheat-sheet \n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["Settings", "SettingsTryAgainOrNot"],
+    "foreground": 34,
+    "background": 42,
+    "type": "set"
+  },
+  {
+    "id": "0d4e5f1a-7b9c-4a2b-8b55-1d2a4f8a7b8c",
+    "header": "SettingsChangeForegroundColor",
+    "content": "Enter new foreground colour. \n The console supports 256 colors. For example: \n Black: 0 \n Dark Red: 1 \n Dark Green: 2 \n Brown: 3 \n Dark Blue: 4 \n Dark Purple: 5 \n Cyan: 6 \n Light Gray : 7 \n For more information, you can follow the links: \n https://www.ditig.com/publications/256-colors-cheat-sheet \n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["Settings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "e8cb771b-0d62-4087-9e19-6cf6c9992314",
+    "header": "GlobalSettingsChangeForegroundColor",
+    "content": "Enter new foreground colour. \n The console supports 256 colors. For example: \n Black: 0 \n Dark Red: 1 \n Dark Green: 2 \n Brown: 3 \n Dark Blue: 4 \n Dark Purple: 5 \n Cyan: 6 \n Light Gray : 7 \n For more information, you can follow the links: \n https://www.ditig.com/publications/256-colors-cheat-sheet \n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["81653b35-d987-4eaf-a681-1bdd2f299984", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["GlobalSettings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "5f828d28-9034-4f93-9dac-98fb33ec441d",
+    "header": "GlobalSettingsChangeBackgroundColor",
+    "content": "Enter new background colour. \n The console supports 256 colors. For example: \n Black: 0 \n Dark Red: 1 \n Dark Green: 2 \n Brown: 3 \n Dark Blue: 4 \n Dark Purple: 5 \n Cyan: 6 \n Light Gray : 7 \n For more information, you can follow the links: \n https://www.ditig.com/publications/256-colors-cheat-sheet \n https://misc.flogisoft.com/bash/tip_colors_and_formatting",
+    "ways": ["81653b35-d987-4eaf-a681-1bdd2f299984", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["GlobalSettings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "1292a98f-1fc1-4b28-a701-ce9de39c718b",
+    "header": "GlobalSettingsChangeLanguage",
+    "content": "Enter new language in 2-letter code. ",
+    "ways": ["81653b35-d987-4eaf-a681-1bdd2f299984", "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce"],
+    "slugways": ["GlobalSettings", "SettingsTryAgainOrNot"],
+    "foreground": 33,
+    "background": 40,
+    "type": "set"
+  },
+  {
+    "id": "2495f7ef-5fc2-4a7e-95c9-efae7dfd20ce",
+    "header": "SettingsTryAgainOrNot",
+    "content": "Setting new parameters failed. \n You can go to the settings, or go to the previous page.",
+    "ways": ["5e8f9a6b-2c4d-4b3a-8a60-6c4b5d7e8f5a", "00000000-0000-0000-0000-000000000000"],
+    "slugways": ["Settings", "PreviousPage"],
+    "foreground": 33,
+    "background": 40,
+    "type": "err"
+  },
+  {
+    "id": "ca905823-df75-4751-9382-d467149f334a",
+    "header": "InvalidMenuSelection",
+    "content": "Such a clause does not exist.",
+    "ways": ["00000000-0000-0000-0000-000000000000"],
+    "slugways": ["PreviousPage"],
+    "foreground": 33,
+    "background": 40,
+    "type": "err"
+  }
+]
